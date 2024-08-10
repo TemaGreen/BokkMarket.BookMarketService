@@ -7,13 +7,13 @@ import exception.BookNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.StreamSupport;
 
 @Service
 public class BookServiceImp implements BookService{
 
+    @Autowired
     private BookRepository bookRepository;
 
     @Override

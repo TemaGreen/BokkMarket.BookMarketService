@@ -3,6 +3,7 @@ package com.example.bookmarketservice.controller;
 import com.example.bookmarketservice.data.Book;
 import com.example.bookmarketservice.request.AddBookRequest;
 import com.example.bookmarketservice.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 @RequestMapping("/books")
 public class BookController {
 
+    @Autowired
     private BookService bookService;
 
     @GetMapping("/{id}")
