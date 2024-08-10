@@ -26,7 +26,6 @@ public class BookController {
     @PostMapping
     public void addBook(@RequestBody AddBookRequest addBookRequest){
         bookService.addBook(new Book(
-                addBookRequest.getName(),
                 addBookRequest.getAuthor(),
                 addBookRequest.getTitle(),
                 addBookRequest.getPrice())
