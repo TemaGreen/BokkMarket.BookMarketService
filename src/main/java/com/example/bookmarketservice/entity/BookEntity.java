@@ -8,7 +8,8 @@ import jakarta.persistence.*;
 public class BookEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "books_seq")
+    @SequenceGenerator(name = "books_seq", allocationSize = 1)
     private Integer id;
 
     private String author;
