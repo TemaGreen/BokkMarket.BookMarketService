@@ -21,7 +21,6 @@ public class BookServiceImp implements BookService{
         BookEntity bookEntity = bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book not found"));
         return new Book(
                 bookEntity.getId(),
-                bookEntity.getName(),
                 bookEntity.getAuthor(),
                 bookEntity.getTitle(),
                 bookEntity.getPrice()
@@ -33,7 +32,6 @@ public class BookServiceImp implements BookService{
         List<Book> books = StreamSupport.stream(bookRepository.findAll().spliterator(), false)
                 .map(e -> new Book(
                         e.getId(),
-                        e.getName(),
                         e.getAuthor(),
                         e.getTitle(),
                         e.getPrice()))
@@ -44,7 +42,6 @@ public class BookServiceImp implements BookService{
     @Override
     public void addBook(Book book) {
         BookEntity bookEntity = new BookEntity(
-                book.getName(),
                 book.getAuthor(),
                 book.getTitle(),
                 book.getPrice());

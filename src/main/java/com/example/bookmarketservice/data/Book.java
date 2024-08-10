@@ -4,8 +4,6 @@ public class Book {
 
     private Integer id;
 
-    private String name;
-
     private String author;
 
     private String title;
@@ -18,14 +16,6 @@ public class Book {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getAuthor() {
@@ -52,16 +42,14 @@ public class Book {
         this.price = price;
     }
 
-    public Book(Integer id, String name, String author, String title, Double price) {
+    public Book(Integer id, String author, String title, Double price) {
         this.id = id;
-        this.name = name;
         this.author = author;
         this.title = title;
         this.price = price;
     }
 
-    public Book(String name, String author, String title, Double price) {
-        this.name = name;
+    public Book(String author, String title, Double price) {
         this.author = author;
         this.title = title;
         this.price = price;
